@@ -23,12 +23,13 @@ exports.shippingController = {
     async addShipping(req, res){
         const tmp = await Shipping.findOne({}).sort({ id: -1 }).limit(1);
         let id = tmp.id;
+        let track = tmp.trackingNumber;
         const newShipping = new Shipping({
             "id": id+1,
             "winesID": req.body.winesID,
             "orderPrice": req.body.orderPrice,
             "orderDate": req.body.orderDate,
-            "trackingNumber": req.body.trackingNumber,
+            "trackingNumber": track + 1,
             "shippingAddress": req.body.shippingAddress,
             "shippingPrice": req.body.shippingPrice,
             "manufactureID": req.body.manufactureID,
