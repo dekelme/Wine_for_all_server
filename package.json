@@ -1,0 +1,26 @@
+{
+  "name": "wine_for_all_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dekelme/Wine_for_all_server.git"
+  },
+  "author": "wineforall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dekelme/Wine_for_all_server/issues"
+  },
+  "homepage": "https://github.com/dekelme/Wine_for_all_server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
