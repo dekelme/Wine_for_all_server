@@ -15,7 +15,8 @@ const userSchema = new Schema({
     imageURL: {type: String},
     founded: {type: Date},
     isClient:{type: Boolean},
-    isManufacture: {type: Boolean}
+    isManufacture: {type: Boolean},
+    favorite: {type: Array}
 
 },{ collection: 'users'});
 
