@@ -18,3 +18,8 @@ GET /api/wines 200 4548 - 108.595 ms
 POST /api/wines - - - - ms
 POST /api/wines - - - - ms
 DELETE /api/wines/9 200 372 - 167.133 ms
+GET /api/users 200 711 - 152.646 ms
+GET /api/users/2 200 477 - 113.920 ms
+POST /api/wines 200 345 - 262.016 ms
+POST /api/users - - - - ms
+GET /api/wines/?manufactureID=3 200 1196 - 178.263 ms

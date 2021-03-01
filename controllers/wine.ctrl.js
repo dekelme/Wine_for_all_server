@@ -1,9 +1,13 @@
 const Wine = require('../models/wine');
 
 exports.wineController = {
-
+    
     getWines(req, res) {
-
+        if(req.query.manufactureID){
+            Wine.find({manufactureID: req.query.manufactureID}).sort({_id: -1})
+                .then(docs => res.json(docs))
+                .catch(err => console.log(err))
+        }
         const filters = {}
         if (req.query.wineName)
             filters["wineName"] = req.query.wineName

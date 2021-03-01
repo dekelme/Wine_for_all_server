@@ -18,11 +18,11 @@ exports.userController = {
 
 
     async addUser(user ,req, res) {
-        // const tmp = await User.findOne({}).sort({ id: -1 }).limit(1);
-        // let id = tmp.id;
+        const tmp = await User.findOne({}).sort({ id: -1 }).limit(1);
+        let id = tmp.id;
         const newUser = new User({
-            // "id": id+1,
-            // "googleID": req.body.googleID,
+            "id": id+1,
+            "googleID": req.body.googleID,
             "firstName":  req.body.firstName,
             "lastName" : req.body.lastName,
             "email": req.body.email,
