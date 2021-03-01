@@ -32,7 +32,7 @@ exports.userController = {
             "city": null,
             "street": null,
             "zip": null,
-            "imageURL": req.body.imageUrl,
+            "imageURL": user.imageUrl,
             "founded": null,
             "isClient": false,
             "isManufacture": false
