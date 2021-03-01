@@ -95,6 +95,27 @@ exports.userController = {
             .catch(err => console.log(err))
 
         }
+        if (body.wineAdd != "" && body.wineAdd != null) {
+            // User.findOne({id: req.params.id})
+            // .then(docs => {
+            //     docs.favorite.id(body.wine).remove()
+            //     docs.save()
+            //     res.json(docs)
+            // })
+            // .catch(err => console.log(err))
+            User.updateOne({id: req.params.id}, {
+                $push: {
+                    favorite: body.wineAdd
+                }
+            })
+                .then(() => {
+                    User.findOne({id: req.params.id})
+                        .then(docs => res.json(docs))
+                        .catch(err => console.log(err))
+                })
+                .catch(err => console.log(err))
+        
+        }
         User.updateOne({ id: parseInt(req.params.id) }, user)
             .then(docs => { res.json(docs) })
             .catch(err => console.log(`Error getting the data from DB: ${err}`));
