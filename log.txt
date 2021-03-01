@@ -33,3 +33,10 @@ POST /api/auth/login - - - - ms
 POST /api/auth/login - - - - ms
 POST /api/auth/login - - - - ms
 POST /api/auth/login - - - - ms
+POST /api/auth/login 200 305 - 556.514 ms
+POST /api/auth/login 200 305 - 89.769 ms
+POST /api/auth/login 200 305 - 88.152 ms
+POST /api/auth/login 200 307 - 267.409 ms
+POST /api/auth/login 200 307 - 88.076 ms
+POST /api/auth/login 200 306 - 264.795 ms
+POST /api/auth/login 200 334 - 88.204 ms
