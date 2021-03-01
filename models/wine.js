@@ -11,7 +11,6 @@ const wineSchema = new Schema({
     description: {type: String, required: true},
     manufacture: {type: String, required: true},
     manufactureID: {type: Number, required: true},
-    clientID: {type: Array},
     winePic: {type: String, required: true}
 
 }, { collection: 'wines'});

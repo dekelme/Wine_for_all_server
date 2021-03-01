@@ -22,17 +22,17 @@ exports.userController = {
         let id = tmp.id;
         const newUser = new User({
             "id": id+1,
-            "googleID": req.body.googleID,
-            "firstName":  req.body.firstName,
-            "lastName" : req.body.lastName,
-            "email": req.body.email,
+            "googleID": user.googleId,
+            "firstName":  user.firstName,
+            "lastName" : user.lastName,
+            "email": user.email,
             "phone": null,
             "gender" : null,
             "dateOfBirth": null,
             "city": null,
             "street": null,
             "zip": null,
-            "imageURL": req.body.ImageUrl,
+            "imageURL": req.body.imageUrl,
             "founded": null,
             "isClient": false,
             "isManufacture": false
@@ -85,7 +85,16 @@ exports.userController = {
         if (body.isManufacture != "" && body.isManufacture != null) {
             user.isManufacture = body.isManufacture
         }
+        if (body.wine != "" && body.wine != null) {
+            User.findOne({id: req.params.user})
+            .then(docs => {
+                docs.favorite.id(body.wine).remove()
+                docs.save()
+                res.json(docs)
+            })
+            .catch(err => console.log(err))
 
+        }
         User.updateOne({ id: parseInt(req.params.id) }, user)
             .then(docs => { res.json(docs) })
             .catch(err => console.log(`Error getting the data from DB: ${err}`));

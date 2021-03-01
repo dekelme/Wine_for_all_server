@@ -23,3 +23,13 @@ GET /api/users/2 200 477 - 113.920 ms
 POST /api/wines 200 345 - 262.016 ms
 POST /api/users - - - - ms
 GET /api/wines/?manufactureID=3 200 1196 - 178.263 ms
+POST //api/auth/login 404 155 - 3.706 ms
+OPTIONS //api/auth/login 404 158 - 4.991 ms
+OPTIONS //api/auth/login 404 158 - 2.314 ms
+POST //api/auth/login 404 155 - 0.759 ms
+POST //api/auth/login 404 155 - 5.226 ms
+POST //api/auth/login 404 155 - 4.244 ms
+POST /api/auth/login - - - - ms
+POST /api/auth/login - - - - ms
+POST /api/auth/login - - - - ms
+POST /api/auth/login - - - - ms

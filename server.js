@@ -16,7 +16,6 @@ const userRouter = require("./routers/user.router");
 const wineRouter = require("./routers/wine.router");
 
 
-
 app.use(cors({ origin: true, credentials: true }))
 app.use(express.json());
 app.use(express.urlencoded({extended: true})); 
