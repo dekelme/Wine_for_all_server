@@ -18,21 +18,21 @@ exports.userController = {
 
 
     async addUser(user ,req, res) {
-        const tmp = await User.findOne({}).sort({ id: -1 }).limit(1);
-        let id = tmp.id;
+        // const tmp = await User.findOne({}).sort({ id: -1 }).limit(1);
+        // let id = tmp.id;
         const newUser = new User({
-            "id": id+1,
-            "googleID": user.id,
-            "firstName":  user.FirstName,
-            "lastName" : user.LastName,
-            "email": user.Email,
+            // "id": id+1,
+            // "googleID": req.body.googleID,
+            "firstName":  req.body.firstName,
+            "lastName" : req.body.lastName,
+            "email": req.body.email,
             "phone": null,
             "gender" : null,
             "dateOfBirth": null,
             "city": null,
             "street": null,
             "zip": null,
-            "imageURL": user.ImageUrl,
+            "imageURL": req.body.ImageUrl,
             "founded": null,
             "isClient": false,
             "isManufacture": false
@@ -92,8 +92,8 @@ exports.userController = {
     },
 
     deleteUser(req, res) {
-        User.findOneAndDelete({ googleID: req.params.id })
-            .then(() => res.json({ googleID: `${req.params.id}` }))
+        User.findOneAndDelete({ id: req.params.id })
+            .then(() => res.json({ id: `${req.params.id}` }))
             .catch(err => console.log(err))
     },
 

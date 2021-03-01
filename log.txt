@@ -2,3 +2,12 @@ POST /api/clients 404 151 - 1.703 ms
 GET /api/clients 404 150 - 3.831 ms
 POST /api/clients 404 151 - 0.521 ms
 POST /api/clients 404 151 - 0.174 ms
+POST /api/users - - - - ms
+POST /api/users - - - - ms
+POST /api/users - - - - ms
+PUT /api/clients/1 404 152 - 5.963 ms
+PUT /api/users/1 200 285 - 157.371 ms
+PUT /api/users/1 200 285 - 102.573 ms
+PUT /api/users/1 200 285 - 101.073 ms
+DELETE /api/users/1 200 16 - 97.948 ms
+DELETE /api/users/1 200 10 - 118.793 ms
