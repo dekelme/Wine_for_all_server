@@ -11,3 +11,10 @@ PUT /api/users/1 200 285 - 102.573 ms
 PUT /api/users/1 200 285 - 101.073 ms
 DELETE /api/users/1 200 16 - 97.948 ms
 DELETE /api/users/1 200 10 - 118.793 ms
+GET /api/wines?foodPairing=Desserts&color=Red 200 662 - 102.644 ms
+GET /api/wines?foodPairing=Desserts&color=white 200 2 - 716.920 ms
+GET /api/wines?foodPairing=Desserts&color=White 200 1187 - 98.322 ms
+GET /api/wines 200 4548 - 108.595 ms
+POST /api/wines - - - - ms
+POST /api/wines - - - - ms
+DELETE /api/wines/9 200 372 - 167.133 ms
