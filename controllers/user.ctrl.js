@@ -86,7 +86,7 @@ exports.userController = {
             user.isManufacture = body.isManufacture
         }
         if (body.wine != "" && body.wine != null) {
-            User.findOne({id: req.params.user})
+            User.findOne({id: req.params.id})
             .then(docs => {
                 docs.favorite.id(body.wine).remove()
                 docs.save()
