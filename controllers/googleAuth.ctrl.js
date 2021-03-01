@@ -17,13 +17,14 @@ verify = async (token) => {
     return ticket.getPayload();
 }
 googleAuth = async (req, res, next) => {
+    console.log('sivan is here')
     let token = req.body.token
     let payload = await verify(token)
-
+    
     await User.findOne({googleID: payload['sub']})
         .then(docs => {
             if (docs) {
-                // res.cookie('user', docs)
+                res.cookie('user', docs)
                 res.json(docs)
             } else {
                 let user = {

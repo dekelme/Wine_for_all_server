@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(morgan('tiny', { stream: logStream }))
 
-app.use('/api/auth', googleAuthRouther.router)
+app.use('/api/auth', googleAuthRouther.googleAuthRouther)
 app.use('/api/shippings', shippingRouter.shippingRouter);
 app.use('/api/pickups', pickupRouter.pickupRouter);
 app.use('/api/users', userRouter.userRouter);

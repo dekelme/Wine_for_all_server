@@ -1,9 +1,9 @@
 const { Router } = require('express');
-const router = new Router();  
+const authDBController = require('../controllers/googleAuth.ctrl');
 
-const authLoginController = require('../controllers/googleAuth.ctrl');
+const googleAuthRouther = new Router();  
 
-router.post('/login', authLoginController.googleAuth);
-router.get('/logout', authLoginController.getLogout);
+googleAuthRouther.post('/login', authDBController.googleAuth);
+googleAuthRouther.get('/logout', authDBController.getLogout);
 
-module.exports = {router};
+module.exports = { googleAuthRouther };
