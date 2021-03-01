@@ -53,7 +53,6 @@ exports.wineController = {
             "manufacture": req.body.manufacture,
             "winePic": req.body.winePic,
             "clientID": req.body.clientID,
-            "winePic": req.body.winePic
         });
 
         newWine.save()
