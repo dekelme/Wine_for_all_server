@@ -13,7 +13,7 @@ const userSchema = new Schema({
     street: { type: String, required: true},
     zip: { type: Number, required: true},
     imageURL: {type: String},
-    founded: {type: Date},
+    founded: {type: Number},
     isClient:{type: Boolean},
     isManufacture: {type: Boolean},
     favorite: {type: Array}
